@@ -1,6 +1,6 @@
 <h1>Pages#home</h1>
 <ul>
-  <li><%= @untouched %>
-  <li><%= @encrypted %>
-  <li><%= @decrypted %>
+  <li><%= @message.untouched %>
+  <li><%= @message.encrypted %>
+  <li><%= PagesController::KewlCrypto.new(@message.encrypted).decrypted %>
 </ul>
